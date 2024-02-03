@@ -1,0 +1,23 @@
+'Author: Lexi Warren
+'Date: 3/2/24
+'Program description: Login using username and password
+'Notes: My parent helped me plan this and I translated it into code
+
+attempts = 1
+Begin:
+TextWindow.WriteLine("Write Username")
+username = TextWindow.Read()
+TextWindow.WriteLine("Write Password")
+password = TextWindow.Read()
+
+If (attempts < 3) Then
+    If (username = "LexiP" AND password = "password") Then
+        TextWindow.WriteLine("Logged in")
+    Else
+        TextWindow.WriteLine("Incorrect username or password")
+        attempts = attempts + 1
+    GoTo Begin
+    EndIF
+Else
+    TextWindow.WriteLine("Too many failed attempts")
+EndIf
